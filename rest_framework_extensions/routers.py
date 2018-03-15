@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 from distutils.version import LooseVersion
 from django.core.exceptions import ImproperlyConfigured
-try:
-    from django.urls.resolvers import NoReverseMatch
-except ImportError:
-    from django.core.urlresolvers import NoReverseMatch
+from django.urls import NoReverseMatch
 
 from rest_framework.routers import (
     DefaultRouter,
